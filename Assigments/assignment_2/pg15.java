@@ -21,8 +21,6 @@ class Test{
 
     double garden  = r_gardenArea-s_gardenArea;
     System.out.println(" how much Bigger garden : "+garden);
-  
-
 
   }
 }
