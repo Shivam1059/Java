@@ -25,9 +25,18 @@ class Student{
      
      if(attend >= 75){
        System.out.println("allow sit in exam ");
+     
      }else{
-       System.out.println("Not  sit in exam ");
-     }
+      System.out.println("You have medical cause  'Y' or 'N' ") ;
+      System.out.println("Enter your answer : ");
+      String inputStr = std.next().toUpperCase();
+      char ans = inputStr.charAt(0);
 
+      if(ans == 'Y'){
+        System.out.println("Allow sit in Exam ");
+      }else{
+          System.out.println("Not sit in Exam ");
+      }
+     }
    }
 }
