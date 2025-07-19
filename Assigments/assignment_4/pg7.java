@@ -8,13 +8,15 @@ class Test{
     int n = sc.nextInt();
     
     // int a = 0;
-    int i=1;
-    while(i<=n){
+    int i = 1;
+    int first = 0, second = 1;
 
-      System.out.println(i);
-     
-      int ans = (n-1)+(n-2);
-      System.out.println(ans);
+    while(i<=n){
+       System.out.println(first);
+       int next = first + second;
+       first = second ;
+       second = next;
+       i++;
     }
   }
 }
