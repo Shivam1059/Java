@@ -1,18 +1,18 @@
 import java.util.Scanner;
 
-class Test{
+class quab{
   public static void main(String args[]){
     Scanner sc = new Scanner(System.in);
 
     System.out.println("Enter number : ");
-    int n = sc.nextInt() ;
-    int i = 1;
-    int sum = 0;
-    while( i<=n){
-       sum =  sum +i;
-      System.out.println(sum+i);
+    int n = sc.nextInt();
+    int count = 0;
+    int i= 1;
+    while(count < n){
+      int quabe = i*i*i;
+      System.out.println(i +" = "+quabe);
+      count++;
       i++;
     }
-   
   }
 }

@@ -5,14 +5,17 @@ class Test{
     Scanner sc = new Scanner(System.in);
 
     System.out.println("Enter number : ");
-    int n = sc.nextInt() ;
+    int n = sc.nextInt();
+
+    int count = 0;
     int i = 1;
-    int sum = 0;
-    while( i<=n){
-       sum =  sum +i;
-      System.out.println(sum+i);
-      i++;
+    while(count < n){
+      if(i%2 != 0){
+        int a = i*i*i;
+        System.out.println(i + " = " +a);
+        count++;
+      }
+         i++;
     }
-   
   }
 }

@@ -5,14 +5,14 @@ class Test{
     Scanner sc = new Scanner(System.in);
 
     System.out.println("Enter number : ");
-    int n = sc.nextInt() ;
-    int i = 1;
+    int n = sc.nextInt();
     int sum = 0;
-    while( i<=n){
-       sum =  sum +i;
+    int i=1;
+    while(i<= n){
+      sum = sum + i;
       System.out.println(sum+i);
       i++;
     }
-   
+
   }
 }
