@@ -21,11 +21,13 @@ class dmart{
 
    //carry-bag
      System.out.println("you taken a  Carrybag (y/n): ");
-     char gender = sc.next().charAt(0);
-     String  CarryBag = sc.next();
-     if(CarryBag == "y"){
+     char bag = sc.next().charAt(0);
+     String  CarryBag ;
+     int preice = 0;
+
+     if(bag == 'y'){
        CarryBag  = "Yes";
- 
+       preice = 10;
      }else{
       CarryBag = "No";
      }
@@ -157,7 +159,7 @@ if(dis_total_amount > 10000){
 //total GST
 double gst  = 0.10*total_amount;
 double total_after_gst = total_amount + gst;
-double dic_after_gst = total_amount + gst ;
+double dic_after_gst = total_amount + gst + preice ;
 
 
     // //output
@@ -177,12 +179,12 @@ double dic_after_gst = total_amount + gst ;
     System.out.println(itemName10 + "\t  \t " +quantity10  +"\t  \t "+item_p10+ "\t \t"+total10+ " Rs"+"\t  \t" + act_total10 +" Rs");
     System.out.println("----------------------------------------------------------------------------------");
     System.out.println(" \t  \t   \t  \t A.P " + "\t \t D.P");
-    System.out.println(" \t  \t   \t   \t "+total_amount + "\t  \t"+dis_total_amount);
+    System.out.println(" \t  \t   \t   \t "+total_amount + "\t  "+dis_total_amount);
     System.out.println( "geft "+Geft + "  \t  \t  0.00 " + "\t \t 0.00");
-    System.out.println(" Carry Bag "+CarryBag+ " \t  \t  10.00 " + "\t 10.00");
-    System.out.println(" GST (10%)  \t  \t   "+gst + "\t  \t "+gst);
+    System.out.println(" Carry Bag "+CarryBag+ " \t \t \t " +preice + " \t \t  "+ preice);
+    System.out.println(" GST (10%)  \t  \t  \t  "+gst + "\t  \t  "+gst);
     System.out.println("----------------------------------------------------------------------------------");
-    System.out.println(" \t  \t   \t  " + total_after_gst + "\t "+ dic_after_gst +" Rs");
+    System.out.println(" \t  \t   \t  " + total_after_gst + "\t  \t"+ dic_after_gst +" Rs");
     System.out.println(" \t  \t  Thank you ");
     System.out.println(" \t  \t    To Visit us  ");
     System.out.println(" \t  \t     D-Mart ");

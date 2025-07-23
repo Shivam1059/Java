@@ -16,6 +16,6 @@ class Test{
     int p = park_para/2;
     int bre = p - len ;
 
-    System.out.println("Parak parameter : "+park_para+"  Parak breadth : "+bre);
+    System.out.println("Park parameter : "+park_para+"  Parak breadth : "+bre);
   }
 }
