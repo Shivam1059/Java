@@ -8,8 +8,11 @@ class Test{
     int n = sc.nextInt();
     int i = 1;
     while(i <= n){
-      System.out.println("*");
+      if( i%2 == 0){
       System.out.println("#");
+      }else{
+      System.out.println("*");
+      }
       i++;
     }
   }

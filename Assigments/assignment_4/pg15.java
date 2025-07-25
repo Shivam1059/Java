@@ -5,16 +5,18 @@ class Test{
   public static void main(String args[]){
     Scanner sc = new Scanner(System.in);
 
-    System.out.println("Enter the number : ");
+    System.out.println("Enter number : ");
     int n = sc.nextInt();
-    int first = 0, second = 1;
-    int i = 1;
-    while(i <= n){
-      int next = first + second;
-      first = second;
-      second = next;
-      System.out.println(first);
-      i++;
+    while(n > 0){
+      int digit = n%10;
+      System.out.println("Foctorial of digit : "+digit);
+       int f = 1;
+      while(digit > 0){
+        f = f*digit;
+        digit--;
+      }
+        System.out.println(f);
+        n = n/10;
     }
   }
 }

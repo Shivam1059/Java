@@ -8,9 +8,12 @@ class Test{
     int n = sc.nextInt();
     int count = 0;
     int i = 65;
+
     while(count <= n){
-          char ch = (char)i;
-          System.out.println(ch);
+          if(i%2 != 0)
+          System.out.println((char)(i));
+         else  System.out.println((char) (i+32));
+          
           count++;
           i++;
     }
