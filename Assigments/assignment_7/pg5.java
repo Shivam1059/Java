@@ -1,24 +1,56 @@
 import java.util.Scanner;
 
-class Test{
-  public static void main(String args[]){
+class Product{
+  private  int  productId;
+  private  String  productName;
+  private  int quantity;
+  private  float price;
 
-     int arr[][] = {{10, 20, 30},
-                   {40, 50, 60},
-                   {70, 80, 90}};
-    
-    int even_sum = 0;
-    int odd_sum = 0;
-    for(int i=0; i<3; i++){
-      for(int j=0; j<3; j++){
-        if(j%2 == 0){
-          even_sum++;
-        }else{
-          odd_sum++;
-        }
-      }
-    }
-    System.out.println("Even sum : "+even_sum);
-    System.out.print("Odd sum : "+odd_sum);
+  //setter method
+  private void setId(int productId){
+    this.productId = productId;
+  }
+  private void setNa(String productName){
+    this.productName = productName;
+  }
+  private void setQ(int quantity){
+    this.quantity = quantity;
+  }
+  private void setP(float price){
+    this.price = price;
+  }
+
+
+class Tast{
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter the productId : ");
+    int id = sc.nextInt();
+
+    System.out.print("Enter the name : ");
+    String name  = sc.next();
+
+    System.out.print("Enter the quantity : ");
+    int quantity = sc.nextInt();
+
+    System.out.print("Enter the price  : ");
+    float price  = sc.nextInt();
+
+   Product obj = new Product();
+   obj.setId(id);
+   obj.setNa(name);
+   obj.setQ(quantity);
+   obj.setP(price);
+
+
+   obj.getTotal();
+
+  }
+}
+  //getter method
+  public void getTotal(){
+    float total_value = price*((float)(price));
+    System.out.println("Total value : "+total_value);
   }
 }

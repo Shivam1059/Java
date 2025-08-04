@@ -1,22 +1,37 @@
 import java.util.Scanner;
+class employee{
+  //data
+  private  int id;
+  private  String name;
+  private  float salary;
+
+  //setter method 
+  public void setId(int id){
+    this.id = id;
+  }
+  public void setName(String name){
+    this.name = name;
+  }
+  public void setSalary(float salary){
+    this.salary = salary;
+  }
+
+  //getter method 
+  public void display(){
+      System.out.println(" id :  "+id);
+      System.out.println("Name : "+name);
+      System.out.println("Salary : "+salary);
+  }
+}
+
 
 class Test{
   public static void main(String args[]){
-
-
-    // int arr[][] = new int[3][3];
-   int arr[][] = { {10, 20, 30},
-                   {40, 50, 60},
-                   { 70, 80, 90}
-                    };
-
-     for(int i=0; i<3; i++){
-      for(int j=0; j<3; j++){
-         if(i==j){
-             System.out.print(arr[i][j]+" ");
-         }
-      }
-              //  System.out.println();
-    }
+   employee obj = new employee();
+   System.out.println("Employee Details ");
+   obj.setId(101);
+   obj.setName("Shiavay");
+   obj.setSalary(50000);
+   obj.display();
   }
 }

@@ -1,20 +1,37 @@
 import java.util.Scanner;
 
+class book{
+    public String title;
+    public String author;
+    public float price;
+
+    //setter method
+    public void setT(String title){
+      this.title = title;
+    }
+    public void setA(String author){
+      this.author = author;
+    }
+    public void setP(float price){
+      this.price = price;
+    }
+
+    //getter method
+    public void display(){
+      System.out.println("Book Title : "+title);
+      System.out.println("Book author : "+author);
+      System.out.println("Book price : "+price);
+    }
+}
+
 class Test{
   public static void main(String args[]){
+    book obj = new book();
+    System.out.println("Book Details");
+    obj.setT("Discovery of India");
+    obj.setA("Mr.Javaharlal Neharu");
+    obj.setP(299);
 
-   int arr[][] = { {10, 20, 30},
-                   {40, 50, 60},
-                   { 70, 80, 90}
-                    };
-
-     for(int i=0; i<3; i++){
-      for(int j=0; j<3; j++){
-         if(i+j == 2){
-             System.out.print(arr[i][j]+" ");
-         }
-      }
-              //  System.out.println();
-    }
+    obj.display();
   }
 }
