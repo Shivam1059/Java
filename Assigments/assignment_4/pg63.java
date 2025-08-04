@@ -12,7 +12,6 @@ class Test{
        int a = 1;
       while(digit > 0){
         a  = a*digit;
-        // sum += a;
         digit--;
       }
        sum += a; 

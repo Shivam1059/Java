@@ -8,11 +8,14 @@ class Test{
     int num = sc.nextInt();
     
     int reverse = 0;
-    while( num != 0){
+    while( num>0){
      int  digit  = num%10;
+      if(digit == 0 && reverse == 0){
+      System.out.print("0");
+      }
       reverse = reverse *10 + digit;
       num = num/10;
     }
-    System.out.println("Total digit : "+reverse);
+      System.out.print(reverse);
   }
 }
