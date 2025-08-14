@@ -7,18 +7,25 @@ class Product{
   private  float price;
 
   //setter method
-  private void setId(int productId){
+  public  void setId(int productId){
     this.productId = productId;
   }
-  private void setNa(String productName){
+  public void setNa(String productName){
     this.productName = productName;
   }
-  private void setQ(int quantity){
+  public void setQ(int quantity){
     this.quantity = quantity;
   }
-  private void setP(float price){
+  public void setP(float price){
     this.price = price;
   }
+
+ 
+   public void getTotal(){
+    float total_value = quantity*price;
+    System.out.println("Total value : "+total_value);
+  }
+}
 
 
 class Tast{
@@ -49,8 +56,4 @@ class Tast{
   }
 }
   //getter method
-  public void getTotal(){
-    float total_value = price*((float)(price));
-    System.out.println("Total value : "+total_value);
-  }
-}
+ 

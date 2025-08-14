@@ -17,13 +17,13 @@ class Car{
     }
 
 //getter method
-    public String getB(){
+    public void getB(){
         System.out.println("Brand of Car :"+ brand);
     }
-    public String getM(){
+    public void getM(){
         System.out.println("Brand of Car :"+ model);
     }
-    public int  getY(){
+    public void   getY(){
         System.out.println("Brand of Car :"+ year);
     }
 }
@@ -32,17 +32,17 @@ class Test{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
 
-        // System.out.print("Enter the car brand : ");
-        // String b = sc.next();
-        // System.out.print("Enter the car Model : ");
-        // String m = sc.next();
-        // System.out.print("Enter the car Year : ");
-        // int  y = sc.nextInt();
+        System.out.print("Enter the car brand : ");
+        String b = sc.nextLine();
+        System.out.print("Enter the car Model : ");
+        String m = sc.nextLine();
+        System.out.print("Enter the car Year : ");
+        int  y = sc.nextInt();
 
         Car obj = new Car();
-        obj.setB("Mahindra Scorpio");
-        obj.setM("M25");
-        obj.setY(2026);
+        obj.setB(b);
+        obj.setM(m);
+        obj.setY(y);
 
         obj.getB();
         obj.getM();
