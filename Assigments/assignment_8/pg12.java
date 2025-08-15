@@ -3,7 +3,8 @@ class Airplane{
 
     private int flightNumber;
     private String destination;
-    private float departureTime;
+    private String departureTime;
+    
 
 
     public Airplane(int flightNumber, String destination, float departureTime){
@@ -12,11 +13,9 @@ class Airplane{
       this.departureTime = departureTime;
     }
 
-    // public void  Display(){
-    //   System.out.print(flightNumber);
-    //   System.out.print(destination);
-    //   System.out.print(destination);
-    // }
+  public void isDelay(){
+    
+  }
 
 }
 

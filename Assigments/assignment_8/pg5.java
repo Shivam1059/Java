@@ -15,6 +15,7 @@ class Library{
     public void Display(){
      for(Book book : bookList){
         System.out.print(book.DisplayBook());
+        System.out.println();
      }
   }
 
@@ -57,6 +58,7 @@ class TestMain{
 
       System.out.print("Enter the number of book : ");
       int n = sc.nextInt();
+      sc.nextLine();
       Book bk1[] = new Book[n];
       Library lib = new Library();
    
@@ -74,10 +76,16 @@ class TestMain{
       lib.addBook(bk1[i]);
 
    }
+      lib.Display();
+
+      System.out.println("Enter the which book you want to remove in collection : ");
+      int index  = sc.nextInt();
+      for(int i=0; i<n; i++){
+        if((i+1) == index) lib.removeBook(bk1[i]);
+      }
 
 
-
-      
+     System.out.println("afther remove book from collection : ");
       lib.Display();
       
    }
