@@ -18,9 +18,18 @@ class Test{
     for(int i=0; i<size; i++){
       System.out.print(" "+arr[i]);
     }
+    System.out.println();
+    System.out.println("Enter the element: ");
+    int element  = sc.nextInt();
+    System.out.println("Enter the position you want to insert : ");
+    int index  = sc.nextInt();
 
-    System.out.println("Enter the index : ");
-    System.out.println("Enter the element  : ");
+   
+    System.out.println("after add  element arr ");
+    for(int i=0; i<size; i++){
+         arr[index] = element;
+       System.out.print(arr[i]+" ");
+    }
 
   }
 }

@@ -1,20 +1,34 @@
 import java.util.Scanner;
 
 class Test{
-  public static void main(String args[]){
+   public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
 
-   int arr[][] = { {10, 20, 30},
-                   {40, 50, 60},
-                   { 70, 80, 90}
-                    };
-
-     for(int i=0; i<3; i++){
-      for(int j=0; j<3; j++){
-         if(i+j == 2){
-             System.out.print(arr[i][j]+" ");
-         }
-      }
-              //  System.out.println();
+    System.out.print("Enter the number : ");
+    int n = sc.nextInt();
+   
+    int arr[] = new int[n];
+    for(int i=0; i<n; i++){
+      System.out.println("Enter the number  "+i);
+      arr[i] = sc.nextInt();
     }
-  }
+
+    for(int i=0; i<n; i++){
+      System.out.print(arr[i]+" ");
+    }
+    System.out.println();
+
+    int max = 0;
+    int min = arr[0];
+    for(int i=0; i<n; i++){
+       if(max < arr[i]){
+          max = arr[i];
+       }
+       else if( min >  arr[i]){
+        min = arr[i];
+       }
+    }
+    System.out.println(" Min : "+min);
+    System.out.println(" Max : "+max);
+   }
 }

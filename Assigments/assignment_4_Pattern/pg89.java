@@ -8,20 +8,17 @@ class Test{
 
   //uppercase 
     for(int i=1; i<n; i++){
-      for(int j=0; j<n-i; j++){
-        System.out.print(" ");
+      for(int j=0; j<n-1; j++){
+        System.out.print("*");
       }
       for(int j=1; j<=i; j++){
-         if(j==n ){
-          System.out.print(j);
-         }else{
            if(j==i){
             System.out.print(j);
-           }else{
-            System.out.print(" ");
            }
-         }
-      }
+          //  else{
+          //   System.out.print("_");
+          //  }
+       }
         
       System.out.println();
     }
@@ -36,16 +33,17 @@ class Test{
          System.out.println();
 
   //lower case       
-  for(int i=1; i<=n; i++){
-      for(int j=1; j<n-i; j++){
-        System.out.print(" ");
+  for(int i=1; i<n; i++){
+      for(int j=0; j<n-1; j++){
+        System.out.print("*");
       }
       for(int j=n; j>0; j--){
         if(j==n-i){
           System.out.print(j);
-        }else{
-          System.out.print(" ");
         }
+        // else{
+        //   System.out.print("_");
+        // }
       }
        System.out.println();
     }

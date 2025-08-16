@@ -1,22 +1,24 @@
 import java.util.Scanner;
-
 class Test{
   public static void main(String args[]){
-
-
-    // int arr[][] = new int[3][3];
-   int arr[][] = { {10, 20, 30},
-                   {40, 50, 60},
-                   { 70, 80, 90}
-                    };
-
-     for(int i=0; i<3; i++){
-      for(int j=0; j<3; j++){
-         if(i==j){
-             System.out.print(arr[i][j]+" ");
-         }
-      }
-              //  System.out.println();
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter the number : ");
+    int n = sc.nextInt();
+    
+    int arr[] = new int[n];
+    for(int i=0; i<n; i++ ){
+       System.out.println("Enter the number : "+i);
+       arr[i] = sc.nextInt();
     }
+    int peak = 0;
+    for(int i=0; i<n; i++){
+      System.out.print(arr[i]+" ");
+    }
+    for(int i=1; i<n; i++){
+      if(arr[i] > arr[i-1]){
+        peak = arr[i];
+      }
+    }
+    System.out.print("Peak element : "+peak);
   }
 }
