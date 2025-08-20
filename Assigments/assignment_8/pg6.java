@@ -70,7 +70,7 @@ class  TestMain{
        int  salary = sc.nextInt();
        
        obj[i] = new employee(name, job,  salary);
-      lib.addemp(obj[i]);
+         lib.addemp(obj[i]);
       
     }
 
