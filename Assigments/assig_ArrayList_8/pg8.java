@@ -23,17 +23,16 @@ class TrafficLight{
      public void TrafficSignal(){
        switch(color){
          case "red": 
-           System.out.print("Signal is "+color+" , Stop");
+           System.out.println("Signal is "+color+" , Stop "+duration);
            break;
          case "yellow": 
-           System.out.print("Signal is "+color+", Ready");
+           System.out.println("Signal is "+color+", Ready "+duration);
            break;
          case "Green": 
-            System.out.print("Signal is "+color+", go");
+            System.out.println("Signal is "+color+", go "+duration);
             break;
          default :
-            System.out.print(" Enter correct color name : ");
-            break;
+            System.out.println(" Enter correct color name : ");
        }
      }
 }

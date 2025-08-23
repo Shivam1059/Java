@@ -60,6 +60,7 @@ class Library{
       for(int i=0; i<n; i++){
          if((i+1) == index) lb.removeBook(book[i]);
       }
+      
       lb.Display();
 
     }

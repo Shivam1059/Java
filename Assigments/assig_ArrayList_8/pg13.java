@@ -12,6 +12,16 @@ class Inventory{
    public void removeP(Product p){
      p_list.remove(p);
    }
+
+   public Product findproduct(String pr){
+        for(Product p : p_list){
+           if(p.getProductName().equals(pr)){
+            return p;
+           }
+        }
+        return null;
+   }
+
    public void Display(){
       for(Product p : p_list){
           p.display();
@@ -32,6 +42,9 @@ class Product{
       this.quantity = quantity;
    }
 
+  public String getProductName(){
+    return product_name;
+  }
    public void  display(){
       System.out.print(product_name + " ");
       System.out.print(quality+" ");
@@ -45,15 +58,17 @@ class TestMain{
      System.out.print("Enter the number of Product ");
      int n = sc.nextInt();
      sc.nextLine();
+
      Product arr[] = new Product[n];
      Inventory p_list = new Inventory();
 
      for(int i=0; i<n; i++){
           System.out.println("Enter the product name : ");
           String p = sc.nextLine();
-          sc.nextLine();
+          
           System.out.println("Enter the product quality : ");
           String qual = sc.nextLine();
+
           System.out.println("Enter the product quantity: ");
           int q  = sc.nextInt();
           sc.nextLine();
@@ -63,15 +78,17 @@ class TestMain{
      }
         p_list.Display();
 
-        System.out.println("Enter the product index that want to remove : ");
-        int index  = sc.nextInt();
-
-        System.out.print("After remove one product update list od Product ");
-         for(Product p : p_list){
-            if(p == index)  p_list.removeP(p);
-         //  p.display();
-          System.out.println();
-      }
+         
+        System.out.println("Enter  the product name that want to remove  : ");
+        String str = sc.nextLine();
+        Product  acc = p_list.findproduct(str);
+         if(acc != null){
+            p_list.removeP(acc);
+          }else{
+             System.out.print("Enter the right product name !");
+          }
+        System.out.println("After remove one product update list od Product ");
+        p_list.Display();
        
    }
-}
+}   
