@@ -70,7 +70,7 @@ class TestMain{
       
       System.out.print("Enter the moive name : ");
       String mv = sc.nextLine();
-       movie m  = ml.findMovie(mv);
+      movie m  = ml.findMovie(mv);
 
        if(m != null){
         System.out.println("Enter your reviews : ");
