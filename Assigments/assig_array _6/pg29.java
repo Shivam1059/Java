@@ -5,7 +5,7 @@ class TestMain{
   public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
     int arr[] = {4,5,6,7,8,9};
-    for(int i: arr){
+    for(int i=0; i<arr.length; i++){
       System.out.print(arr[i]+" ");
     }
   System.out.println();
@@ -23,20 +23,17 @@ class TestMain{
          status = true;
       }
      else if(target > arr[mid]){
-        mid++;
-        end--;
+        start = mid;
      }else{
-      start++;
-      mid--;
+      end = mid;
      }
+     start++;
+     end--;
   }
-
   if(status){
     System.out.print("element is found");
   }else{
     System.out.print("element is not  found");
   }
-
-
   }
 }
