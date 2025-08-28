@@ -6,53 +6,42 @@ class StudentList{
     ArrayList<Student>s_list3 =  new ArrayList<>();
     ArrayList<Student>s_list4 =  new ArrayList<>();
    
+    public void addString(Student s){
+       if(s.getScore() <= 100 && s.getScore() > 80 ){
+          s_list1.add(s);
+        }
+        else if(s.getScore() <= 80 && s.getScore() > 65){
+          s_list2.add(s);
+        }
+        else if(s.getScore() <= 65  && s.getScore() > 50 ){
+          s_list3.add(s);
+        }else{
+          s_list4.add(s);
+        }
+    }
 
-    public void addSt1(Student st){
-      s_list1.add(st);
-    }
-    public void addSt2(Student st){
-      s_list2.add(st);
-    }
-    public void addSt3(Student st){
-      s_list3.add(st);
-    }
-    public void addSt4(Student st){
-      s_list4.add(st);
-    }
-
-    public void Display1(){
-         System.out.println();
+    public void Display(){
       System.out.println("Group : [80-100]");
       for(Student ele : s_list1){
          ele.display();
          System.out.println();
       }
-    }  
-      public void Display2(){
-           System.out.println();
-         System.out.println("Group : [65-80]");
+       System.out.println("Group : [65-80]");
       for(Student ele : s_list2){
          ele.display();
          System.out.println();
       }
-      }  
-
-        public void Display3(){
-             System.out.println();
-           System.out.println("Group : [50-65]");
+       System.out.println("Group : [50-65]");
       for(Student ele : s_list3){
          ele.display();
          System.out.println();
       }
-        }
-
-       public void Display4(){ 
-           System.out.println(); 
          System.out.println("Group : [0-50]");  
       for(Student ele : s_list4){
          ele.display();
          System.out.println();
       }
+    
     }
 }
 
@@ -70,6 +59,9 @@ class Student{
       this.score = score;
      }
 
+    public int  getScore(){
+      return score;
+    }
      public void display(){
       System.out.print("Nmae : "+name+" ");
       System.out.print("Rollno: "+roll_no+" ");
@@ -95,22 +87,19 @@ class TestMain{
      Student obj9 = new Student("Mohan", 109, 20, 88);
      Student obj10 = new Student("Ram", 110, 18, 63);
 
-     sl.addSt1(obj1);
-     sl.addSt1(obj2);
-     sl.addSt1(obj3);
-     sl.addSt3(obj4);
-     sl.addSt2(obj7);
-     sl.addSt1(obj9);
-     sl.addSt4(obj5);
-     sl.addSt3(obj10);
-     sl.addSt3(obj6);
-     sl.addSt4(obj8);
+     sl.addString(obj8);
+     sl.addString(obj2);
+     sl.addString(obj3);
+     sl.addString(obj4);
+     sl.addString(obj7);
+     sl.addString(obj9);
+     sl.addString(obj5);
+     sl.addString(obj10);
+     sl.addString(obj6);
+     sl.addString(obj1);
 
 
-     sl.Display1();
-     sl.Display2();
-     sl.Display3();
-     sl.Display4();
+     sl.Display();
  
   }
 }

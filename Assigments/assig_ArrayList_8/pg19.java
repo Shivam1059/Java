@@ -1,22 +1,27 @@
+import java.util.ArrayList;
+
 
  class TravalBookingSystem{
        ArrayList<flights> f_list = new ArrayList<>();
        ArrayList<hotels> h_list = new ArrayList<>();
 
+      //flights
        public void bookflight(flights f){
          f_list.add(f);
        }
-       public void cancleflight(flight f){
+       public void cancleflight(flights f){
         f_list.remove(f);
        }
-       public flight findflight(String s){
-          for(flight ele : findflight){
+       public flights findflight(String s){
+          for(flights ele : f_list){
              if( ele.getflight(fight).equals(s)){
                    return ele;
              }
           }
           return null;
        }
+
+     //hotels
        public void bookhotels(hotels h){
          h_list.add(h);
        }
@@ -24,35 +29,37 @@
         h_list.remove(h);
        }
        public void  findflight(String s){
-          for(hotel ele : findhotel){
+          for(hotels ele : h_list){
              if( ele.gethotel(hotel).equals(s)){
-                  return hotel;
+                  return ele;
              }
           }
           return null;
        }
+
+
       public void Display(){
-        for(flight f : f_list){
+        for(flights f : f_list){
           f.display();
         }
       }
       public void Display(){
-        for(hotel h : h_list){
+        for(hotels h : h_list){
           h.display();
         }
       }
  }
 class flights{
-    private String flight;
+    private String flights;
 
-    public flights(String flight){
+    public flights(String flights){
        this.flights = flights;
     }
     public void getflight(){
-      return flight;
+      return flights;
     }
     public void display(){
-      System.out.print(flight);
+      System.out.print(flights);
     }
 }
 class hotels{
@@ -75,9 +82,9 @@ class TestMain{
      Scanner sc = new Scanner(System.in);
      TravalBookingSystem tp = new TravalBookingSystem();
 
-     flight ft = new fight("Aro india");
-     flight ft1 = new fight("Vestara");
-     flight ft2 = new fight("Indigo");
+     flights ft = new fight("Aro india");
+     flights ft1 = new fight("Vestara");
+     flights ft2 = new fight("Indigo");
      tp.bookflight(ft);
      tp.bookflight(ft1);
      tp.bookflight(ft2);
