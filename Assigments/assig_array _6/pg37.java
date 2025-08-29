@@ -3,6 +3,7 @@ class Insertion{
 
   public static void  insertionSort(int arr[]){
    // Start from second element
+   // int arr[] = {8,7,1,3,19};
     for(int i=1; i<arr.length; i++){
       int key = arr[i];
       int j = i-1;
