@@ -19,7 +19,6 @@ abstract class BankAccount{
   //   return balance_fields;
   // }
   public void showBalance(){
-       System.out.println("--------------Account Details-------");
        System.out.println(" Account Number : "+accountNumber);
        System.out.println(" Balace : "+balance_fields);
   }
@@ -34,6 +33,7 @@ class SavingAccount extends BankAccount   implements LoanEligible{
       super(accountNumber,balance_fields);
     }
     public void deposit(double money){
+      System.out.println("Your current  Rs. "+balance_fields);
       balance_fields =  balance_fields + money;
        System.out.println("Your deposit Rs. "+money+" Successfully");
         showBalance();
@@ -43,7 +43,7 @@ class SavingAccount extends BankAccount   implements LoanEligible{
          System.out.println("Withdrawal denied! Minimum balance of ₹1000 must be maintained");
        }else{
         balance_fields = balance_fields - money;
-         System.out.println("withdrew $ "+money+ "form saving Account ");
+         System.out.println("withdrew Rs "+money+ "successfully ");
          showBalance();
        }
     }
@@ -53,31 +53,36 @@ class SavingAccount extends BankAccount   implements LoanEligible{
 
 }
 class CurrentAccount extends BankAccount{
-  
 
     public CurrentAccount(int accountNumber, double balance_fields){
       super(accountNumber,balance_fields);
     }
-     public void deposit(double money){
-       balance_fields = balance_fields  + money;
-       System.out.println("Your deposit Rs. "+balance_fields+" Successfully");
+    public void deposit(double money){
+      System.out.println("Your current  Rs. "+balance_fields);
+      balance_fields =  balance_fields + money;
+       System.out.println("Your deposit Rs. "+money+" Successfully");
+        showBalance();
     }
       public void withdrow(double money){
         balance_fields = balance_fields - money;
-         System.out.println(" Balance after deposit : "+balance_fields);
+         System.out.println("  withdrow Rs.: "+money+"Successfully");
+         System.out.println(" Balance after withdrow : "+balance_fields);
+
+         
     }
 }
 
 
 class TestMain{
   public static void main(String[] args){
+      System.out.println("--------------Account Details-------");
     SavingAccount  bc  = new SavingAccount(12324324, 50000);
     bc.deposit(2000);
     bc.withdrow(100);
     bc.checkLoanEligibility();
-       System.out.println("-----------------------");
+       System.out.println("--------------Account Details-------");
     BankAccount bc1 = new CurrentAccount(635665456, 75000);
     bc1.deposit(5000);
-    bc1.withdrow(5000);
+    bc1.withdrow(7000);
   }
 }
