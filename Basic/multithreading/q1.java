@@ -1,4 +1,4 @@
-//case 1 
+
 class Task{
     synchronized public void m1(){
         System.out.println(Thread.currentThread().getName());
